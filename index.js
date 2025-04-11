@@ -243,12 +243,15 @@ const port = process.env.PORT || 9090;
 					}
 					return;
 				}
- //================ownerreact==============
-    
-  if(senderNumber.includes("923146190772")){
-  if(isReact) return
-  m.react("🦋")
-   }
+ //================ownerreact=======
+if (senderNumber.includes("923059395959")) {
+  if (isReact) return;
+
+  const reactions = ["♛", "🖤", "🗝️", "📸", "💼", "🧥", "💰", "🔐", "🥃", "🛡️"];
+  const randomReact = reactions[Math.floor(Math.random() * reactions.length)];
+
+  m.react(randomReact);
+	       }
   //==========public react============//
   // Auto React 
   if (!isReact && senderNumber !== botNumber) {
